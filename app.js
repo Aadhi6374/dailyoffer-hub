@@ -8,7 +8,7 @@ const products = [
         price: 40.66, 
         rating: 4, 
         image: "https://img.forestessentialsindia.com/pub/media/catalog/product/cache/f8158826193ba5faa8b862a9bd1eb9e9/8/8/8842_soundarya_radiance_day_cream_50g_front_2048_x_2048.png", 
-        amazon: "https://amzn.in/d/08RV7rJi", 
+        amazon: "https://amzn.to/4sbSjai", 
        // flipkart: "https://www.flipkart.com/search?q=Puma+Mens+Running+Shoes" 
     },
      { 
