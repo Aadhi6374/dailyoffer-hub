@@ -11,7 +11,7 @@ const products = [
         amazon: "https://amzn.to/4sbSjai", 
        // flipkart: "https://www.flipkart.com/search?q=Puma+Mens+Running+Shoes" 
     },
-     { 
+    /* { 
         id: 2, 
         name: "Levi's Classic Denim Jacket", 
         category: "Fashion", 
@@ -20,8 +20,8 @@ const products = [
         image: "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=500&q=80", 
         amazon: "https://www.amazon.in/s?k=Levis+Men+Denim+Jacket", 
         flipkart: "https://www.flipkart.com/search?q=Levis+Men+Denim+Jacket" 
-    },
-    { 
+    },*/
+  /*  { 
         id: 3, 
         name: "Women's Floral Maxi Dress", 
         category: "Fashion", 
@@ -102,7 +102,7 @@ const products = [
         image: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=500&q=80", 
         amazon: "https://www.amazon.in/s?k=JBL+Flip+6", 
         flipkart: "https://www.flipkart.com/search?q=JBL+Flip+6" 
-     }
+     }*/
 ];
 
 let cart = [];
@@ -224,4 +224,5 @@ function updateCartUI() {
 }
 
 // Initialize the product grid
+
 renderProducts();
