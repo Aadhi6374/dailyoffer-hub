@@ -5,7 +5,7 @@ const products = [
         id: 1, 
         name: "Forest Essentials Bestselling Soundarya Night Cream with 24K Gold | Anti-Ageing Overnight Repair| With Bakuchiol & Hyaluronic Acid | Restorative & Nourishing", 
         category: "Luxury Skin care beauty", 
-        price: 3375.00, 
+        price: 40.66, 
         rating: 4, 
         image: "https://img.forestessentialsindia.com/pub/media/catalog/product/cache/f8158826193ba5faa8b862a9bd1eb9e9/8/8/8842_soundarya_radiance_day_cream_50g_front_2048_x_2048.png", 
         amazon: "https://amzn.in/d/08RV7rJi", 
