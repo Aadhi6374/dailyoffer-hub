@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAILY OFFER HUB | Premium Deals</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: { 50: '#f0f9ff', 500: '#0ea5e9', 600: '#0284c7', 900: '#0c4a6e' },
+                        amazon: '#FF9900',
+                        flipkart: '#2874F0'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        .hero-gradient { background: linear-gradient(135deg, #1e293b 0%, #0369a1 100%); }
+        .cart-slide-enter { transform: translateX(100%); }
+        .cart-slide-active { transform: translateX(0); transition: transform 0.3s ease-in-out; }
+        .hide-scroll::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased font-sans">
+
+    <nav class="fixed w-full z-50 glass-nav shadow-sm border-b border-gray-100 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="filterCategory('All')">
+                    <img src="C:\Users\nithi\Desktop\aadhibot\Pinterest 1 Logo.jpg.jpeg" alt="Logo" class="h-10 w-10 mr-2">
+                    <span class="font-bold text-2xl tracking-tight text-gray-900">DAILY<span class="text-brand-600">OFFER HUB</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <button onclick="filterCategory('All')" class="text-gray-600 hover:text-brand-600 font-medium transition">Home</button>
+                    <button onclick="filterCategory('Fashion')" class="text-gray-600 hover:text-brand-600 font-medium transition">Fashion</button>
+                    <button onclick="filterCategory('Electronics')" class="text-gray-600 hover:text-brand-600 font-medium transition">Electronics</button>
+                </div>
+                <div class="flex items-center">
+                    <button onclick="toggleCart()" class="relative p-2 text-gray-600 hover:text-brand-600 transition">
+                        <i class="fa-solid fa-cart-shopping text-xl"></i>
+                        <span id="cart-count" class="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white transform translate-x-1/4 -translate-y-1/4 bg-red-500 rounded-full">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-gradient pt-24 pb-16 sm:pt-32 sm:pb-24 lg:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6">
+                Top Picks Just For You
+            </h1>
+            <p class="mt-4 text-lg md:text-xl text-brand-50 max-w-2xl mx-auto mb-10">
+                Compare and buy from Amazon or Flipkart directly from our curated list of 10 premium items.
+            </p>
+        </div>
+    </header>
+
+    <main id="products-section" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+            <h2 id="category-title" class="text-3xl font-bold text-gray-900">Featured Products</h2>
+            <select id="mobile-filter" onchange="filterCategory(this.value)" class="mt-4 md:mt-0 block w-full md:w-48 pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-brand-500 focus:border-brand-500 sm:text-sm rounded-md shadow-sm bg-white border">
+                <option value="All">All Categories</option>
+                <option value="Fashion">Fashion</option>
+                <option value="Electronics">Electronics</option>
+            </select>
+        </div>
+        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+    </main>
+
+    <div id="cart-drawer" class="fixed inset-y-0 right-0 z-[100] w-full max-w-md bg-white shadow-2xl cart-slide-enter transition-transform duration-300 flex flex-col pointer-events-none">
+        <div class="px-6 py-4 border-b border-gray-200 flex justify-between items-center bg-gray-50 pointer-events-auto">
+            <h2 class="text-lg font-bold text-gray-900">Your Cart</h2>
+            <button onclick="toggleCart()" class="text-gray-500 hover:text-gray-700 transition"><i class="fa-solid fa-xmark text-xl"></i></button>
+        </div>
+        <div id="cart-items" class="flex-1 overflow-y-auto p-6 space-y-6 pointer-events-auto hide-scroll">
+            <div id="empty-cart-msg" class="text-center text-gray-500 mt-10">Your cart is empty.</div>
+        </div>
+        <div class="border-t border-gray-200 p-6 bg-gray-50 pointer-events-auto">
+            <div class="flex justify-between text-base font-medium text-gray-900 mb-4">
+                <p>Subtotal</p>
+                <p id="cart-total">$0.00</p>
+            </div>
+            <button class="w-full bg-brand-600 rounded-md shadow-sm py-3 px-4 text-white hover:bg-brand-700 transition font-bold">Checkout</button>
+        </div>
+    </div>
+    <div id="cart-overlay" onclick="toggleCart()" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden transition-opacity duration-300"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
