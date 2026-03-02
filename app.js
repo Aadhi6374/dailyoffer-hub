@@ -111,8 +111,8 @@ function updateCart() {
         `;
     });
 
-    cartCount.innerText = qty;
-    cartTotal.innerText = formatINR(total);
+    if (cartCount) cartCount.innerText = qty;
+    if (cartTotal) cartTotal.innerText = formatINR(total);
 }
 
 // TOGGLE CART
@@ -132,5 +132,3 @@ function filterCategory(category) {
 document.addEventListener("DOMContentLoaded", function () {
     renderProducts();
 });
-
-
