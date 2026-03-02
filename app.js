@@ -3,8 +3,8 @@ const products = [
         id: 1,
         name: "Forest Essentials Soundarya Night Cream",
         category: "Luxury Skin Care",
-        originalPrice: 5699,
-        price: 3990,
+        originalPrice: 3373,
+        price: 3375,
         rating: 4,
         description: "Luxurious Ayurvedic night cream enriched with 24K gold for radiant and youthful-looking skin.",
         image: "https://img.forestessentialsindia.com/pub/media/catalog/product/cache/f8158826193ba5faa8b862a9bd1eb9e9/8/8/8842_soundarya_radiance_day_cream_50g_front_2048_x_2048.png",
@@ -163,5 +163,6 @@ function updateCart() {
 }
 
 document.addEventListener("DOMContentLoaded", renderProducts);
+
 
 
