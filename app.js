@@ -25,7 +25,7 @@ const products = [
         id: 3,
         name: "GOBOULT Earl TWS Earbuds with Hybrid ANC",
         category: "Luxury EarBud",
-        originalPrice: 4999,
+        originalPrice: 6999,
         price: 2499,
         rating: 4,
         description: "Hybrid ANC up to 50dB with 50 hours playtime and powerful 10mm dual drivers for immersive sound.",
@@ -36,7 +36,7 @@ const products = [
         id: 4,
         name: "Brick Brown Wooden 2-Tier Spice Rack Organizer",
         category: "Kitchen Appliance",
-        originalPrice: 5999,
+        originalPrice: 5699,
         price: 3999,
         rating: 4,
         description: "Handcrafted premium wooden spice rack designed to organize your kitchen elegantly.",
@@ -163,3 +163,4 @@ function updateCart() {
 }
 
 document.addEventListener("DOMContentLoaded", renderProducts);
+
