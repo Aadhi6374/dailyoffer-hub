@@ -4,7 +4,7 @@ const products = [
         id: 1, 
         name: "Forest Essentials Soundarya Night Cream",
         category: "Luxury Skin Care", 
-        price: 3,375, 
+        price: 3375, 
         rating: 4, 
         image: "https://img.forestessentialsindia.com/pub/media/catalog/product/cache/f8158826193ba5faa8b862a9bd1eb9e9/8/8/8842_soundarya_radiance_day_cream_50g_front_2048_x_2048.png", 
         amazon: "https://amzn.to/40zodlq"
@@ -24,7 +24,7 @@ const products = [
         id: 3, 
         name: "GOBOULT Earl TWS Earbuds with Hybrid ANC",
         category: "Luxury EarBud", 
-        price: 2,499, 
+        price: 2499, 
         rating: 4, 
         image: "https://m.media-amazon.com/images/I/71ut+5l0kyL._SL1500_.jpg", 
         amazon: "https://amzn.to/4lbYRnm"
@@ -132,4 +132,5 @@ function filterCategory(category) {
 document.addEventListener("DOMContentLoaded", function () {
     renderProducts();
 });
+
 
