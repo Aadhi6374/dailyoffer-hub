@@ -46,7 +46,20 @@ const products = [
         offerNote: "🏠 Kitchen special deal! Upgrade your space before this offer disappears.",
         image: "https://m.media-amazon.com/images/I/81yH2z-ELGL._SL1500_.jpg",
         amazon: "https://amzn.to/4kYRkba"
+    },
+     {
+        id: 5,
+        name: "fire-Boltt Phoenix Pro Smartwatch – Bluetooth Calling & 120+ Sports Modes",
+        category: "Luxury Smart Watch",
+        originalPrice: 18999,
+        price: 1299,
+        rating: 4,
+        description: "Take calls, track your health, and push your fitness goals — all without touching your phone.
+        offerNote: "🔥 Hot deal alert! Secure yours before stocks run out!",
+        image: "https://m.media-amazon.com/images/I/71tkAAxauUL._SL1500_.jpg",
+        amazon: "https://amzn.to/4bfVgRE"
     }
+    
 ];
 
 let cart = [];
@@ -161,5 +174,6 @@ function updateCart() {
 }
 
 document.addEventListener("DOMContentLoaded", renderProducts);
+
 
 
