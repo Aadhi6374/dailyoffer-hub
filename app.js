@@ -30,7 +30,7 @@ const products = [
         id: 4,
         name: "Brick Brown Handcrafted Premium Homeydo Organizer | Wooden Spice Rack | 2-Tier Kitchen Countertop | Cabinet Storage Shelf | Home Décor Display In Wood (18.0X10.6X18.1 Inch) - Tiered Shelf
 ",
-        category: "Kitchen Appliance,
+        category: "Kitchen Appliance",
         price:3999,
         rating: 4,
         image: "https://m.media-amazon.com/images/I/81yH2z-ELGL._SL1500_.jpg",
@@ -131,5 +131,6 @@ function toggleCart() {
 }
 
 document.addEventListener("DOMContentLoaded", renderProducts);
+
 
 
