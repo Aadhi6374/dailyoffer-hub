@@ -3,11 +3,10 @@ const products = [
         id: 1,
         name: "Forest Essentials Soundarya Night Cream",
         category: "Luxury Skin Care",
-        price: 3375,
+        originalPrice: 5699,
+        price: 3990,
         rating: 4,
         description: "Luxurious Ayurvedic night cream enriched with 24K gold for radiant and youthful-looking skin.",
-        features: ["24K Gold Infused", "Anti-Aging Formula", "Deep Nourishment", "Premium Skincare"],
-        offerNote: "⚡ Note: This offer may end soon. Be quick and grab yours today!",
         image: "https://img.forestessentialsindia.com/pub/media/catalog/product/cache/f8158826193ba5faa8b862a9bd1eb9e9/8/8/8842_soundarya_radiance_day_cream_50g_front_2048_x_2048.png",
         amazon: "https://amzn.to/40zodlq"
     },
@@ -15,11 +14,10 @@ const products = [
         id: 2,
         name: "Anti-Aging Skincare Premium Gift Set",
         category: "Luxury Skin Care",
+        originalPrice: 4999,
         price: 3375,
         rating: 4,
         description: "Complete premium skincare combo designed to restore glow and fight early signs of aging.",
-        features: ["Complete Care Set", "Hydration Boost", "Glow Enhancement", "Perfect Gift Option"],
-        offerNote: "⚡ Note: Limited-time deal. Don’t miss this special offer!",
         image: "https://m.media-amazon.com/images/I/61FtBsWTqlL._SL1500_.jpg",
         amazon: "https://amzn.to/3MZ2Jv3"
     },
@@ -27,11 +25,10 @@ const products = [
         id: 3,
         name: "GOBOULT Earl TWS Earbuds with Hybrid ANC",
         category: "Luxury EarBud",
+        originalPrice: 4999,
         price: 2499,
         rating: 4,
         description: "Hybrid ANC up to 50dB with 50 hours playtime and powerful 10mm dual drivers for immersive sound.",
-        features: ["50dB Hybrid ANC", "50H Battery", "Spatial Audio", "IPX5 Water Resistant"],
-        offerNote: "⚡ Hurry! Stocks are selling fast. Grab this powerful sound upgrade now!",
         image: "https://m.media-amazon.com/images/I/71ut+5l0kyL._SL1500_.jpg",
         amazon: "https://amzn.to/4lbYRnm"
     },
@@ -39,11 +36,10 @@ const products = [
         id: 4,
         name: "Brick Brown Wooden 2-Tier Spice Rack Organizer",
         category: "Kitchen Appliance",
+        originalPrice: 5999,
         price: 3999,
         rating: 4,
         description: "Handcrafted premium wooden spice rack designed to organize your kitchen elegantly.",
-        features: ["2-Tier Design", "Space Saving", "Premium Wood Finish", "Modern Kitchen Decor"],
-        offerNote: "⚡ Limited availability. Upgrade your kitchen before the deal ends!",
         image: "https://m.media-amazon.com/images/I/81yH2z-ELGL._SL1500_.jpg",
         amazon: "https://amzn.to/4kYRkba"
     }
@@ -55,6 +51,10 @@ function formatINR(amount) {
     return "₹" + amount.toLocaleString("en-IN");
 }
 
+function calculateDiscount(original, price) {
+    return Math.round(((original - price) / original) * 100);
+}
+
 function renderProducts() {
     const grid = document.getElementById("product-grid");
     if (!grid) return;
@@ -62,45 +62,65 @@ function renderProducts() {
     grid.innerHTML = "";
 
     products.forEach(product => {
-        grid.innerHTML += `
-            <div class="bg-white rounded-xl shadow-md border hover:shadow-lg transition flex flex-col">
 
-                <div style="height: 320px; display: flex; align-items: center; justify-content: center; background: white;">
-                    <img src="${product.image}" 
-                         style="max-height: 300px; width: auto; object-fit: contain;">
+        const discount = calculateDiscount(product.originalPrice, product.price);
+
+        grid.innerHTML += `
+            <div class="bg-white rounded-xl shadow-md border hover:shadow-lg transition flex flex-col p-4">
+
+                <!-- Limited Deal Badge -->
+                <div style="background:#cc0c39; color:white; font-size:12px; padding:6px 10px; border-radius:4px; width:fit-content; margin-bottom:10px;">
+                    Limited time deal
                 </div>
 
-                <div class="p-5 flex flex-col flex-1">
-                    <h3 class="font-bold mb-2 text-gray-800">
-                        ${product.name}
-                    </h3>
+                <!-- Product Image -->
+                <div style="height:280px; display:flex; align-items:center; justify-content:center;">
+                    <img src="${product.image}" style="max-height:260px; object-fit:contain;">
+                </div>
 
-                    <p style="font-size:14px; color:#555; margin-bottom:8px;">
-                        ${product.description}
-                    </p>
+                <!-- Product Name -->
+                <h3 style="font-weight:600; margin-top:10px;">
+                    ${product.name}
+                </h3>
 
-                    <ul style="font-size:13px; color:#444; margin-bottom:10px; padding-left:18px;">
-                        ${product.features.map(f => `<li>✔ ${f}</li>`).join("")}
-                    </ul>
+                <!-- Description -->
+                <p style="font-size:13px; color:#555; margin-top:6px;">
+                    ${product.description}
+                </p>
 
-                    <span class="text-2xl font-bold mb-2 text-gray-900">
-                        ${formatINR(product.price)}
+                <!-- Price Section -->
+                <div style="margin-top:8px;">
+                    <span style="color:#cc0c39; font-size:18px; font-weight:bold;">
+                        -${discount}%
                     </span>
 
-                    <p style="color:#dc2626; font-size:14px; margin-bottom:12px; font-weight:500;">
-                        ${product.offerNote}
-                    </p>
-
-                    <button onclick="addToCart(${product.id})"
-                        class="w-full bg-gray-100 py-2 rounded mb-2 hover:bg-black hover:text-white transition">
-                        Add to Cart
-                    </button>
-
-                    <a href="${product.amazon}" target="_blank"
-                        class="w-full block text-center bg-yellow-500 hover:bg-yellow-600 text-white py-2 rounded transition">
-                        Buy on Amazon
-                    </a>
+                    <span style="font-size:26px; font-weight:bold; margin-left:8px;">
+                        ${formatINR(product.price)}
+                    </span>
                 </div>
+
+                <div style="font-size:14px; color:#555;">
+                    M.R.P: <span style="text-decoration:line-through;">
+                        ${formatINR(product.originalPrice)}
+                    </span>
+                </div>
+
+                <!-- Urgency -->
+                <p style="color:#dc2626; font-size:13px; margin-top:6px;">
+                    ⚡ Hurry! This offer may end soon. Grab it before it's gone!
+                </p>
+
+                <!-- Buttons -->
+                <button onclick="addToCart(${product.id})"
+                    style="margin-top:10px; padding:8px; background:#f0f0f0; border:none; border-radius:6px;">
+                    Add to Cart
+                </button>
+
+                <a href="${product.amazon}" target="_blank"
+                    style="margin-top:8px; padding:10px; text-align:center; background:#ffd814; color:black; border-radius:6px; text-decoration:none; font-weight:600;">
+                    Buy on Amazon
+                </a>
+
             </div>
         `;
     });
@@ -121,35 +141,25 @@ function addToCart(id) {
 
 function updateCart() {
     const cartItems = document.getElementById("cart-items");
-    const cartCount = document.getElementById("cart-count");
     const cartTotal = document.getElementById("cart-total");
 
     if (!cartItems) return;
 
     cartItems.innerHTML = "";
-
     let total = 0;
-    let qty = 0;
 
     cart.forEach(item => {
         total += item.price * item.qty;
-        qty += item.qty;
 
         cartItems.innerHTML += `
-            <div style="display:flex; justify-content:space-between; border-bottom:1px solid #ddd; padding-bottom:8px; margin-bottom:8px;">
-                <p>${item.name} (x${item.qty})</p>
-                <p>${formatINR(item.price * item.qty)}</p>
+            <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+                <span>${item.name} (x${item.qty})</span>
+                <span>${formatINR(item.price * item.qty)}</span>
             </div>
         `;
     });
 
-    if (cartCount) cartCount.innerText = qty;
     if (cartTotal) cartTotal.innerText = formatINR(total);
-}
-
-function toggleCart() {
-    const drawer = document.getElementById("cart-drawer");
-    if (drawer) drawer.classList.toggle("translate-x-full");
 }
 
 document.addEventListener("DOMContentLoaded", renderProducts);
