@@ -42,16 +42,18 @@ function renderProducts() {
 
     products.forEach(product => {
         grid.innerHTML += `
-            <div class="bg-white rounded-xl shadow-md border hover:shadow-lg transition overflow-hidden flex flex-col">
+            <div class="bg-white rounded-xl shadow-md border hover:shadow-lg transition flex flex-col">
 
-                <!-- FIXED IMAGE SECTION -->
-                <div class="h-72 flex items-center justify-center bg-white p-4">
+                <!-- IMAGE SECTION FIXED -->
+                <div style="height: 320px; display: flex; align-items: center; justify-content: center; background: white;">
                     <img src="${product.image}" 
-                         class="max-h-full max-w-full object-contain">
+                         style="max-height: 300px; width: auto; object-fit: contain;">
                 </div>
 
                 <div class="p-5 flex flex-col flex-1">
-                    <h3 class="font-bold mb-2 text-gray-800">${product.name}</h3>
+                    <h3 class="font-bold mb-2 text-gray-800">
+                        ${product.name}
+                    </h3>
 
                     <span class="text-2xl font-bold mb-4 text-gray-900">
                         ${formatINR(product.price)}
@@ -102,7 +104,7 @@ function updateCart() {
         qty += item.qty;
 
         cartItems.innerHTML += `
-            <div class="flex justify-between border-b pb-2">
+            <div style="display:flex; justify-content:space-between; border-bottom:1px solid #ddd; padding-bottom:8px; margin-bottom:8px;">
                 <p>${item.name} (x${item.qty})</p>
                 <p>${formatINR(item.price * item.qty)}</p>
             </div>
