@@ -7,6 +7,7 @@ const products = [
         price: 3375,
         rating: 4,
         description: "Luxurious Ayurvedic night cream enriched with 24K gold for radiant and youthful-looking skin.",
+        offerNote: "⚡ Exclusive beauty deal! This glow upgrade may end soon. Grab it now!",
         image: "https://img.forestessentialsindia.com/pub/media/catalog/product/cache/f8158826193ba5faa8b862a9bd1eb9e9/8/8/8842_soundarya_radiance_day_cream_50g_front_2048_x_2048.png",
         amazon: "https://amzn.to/40zodlq"
     },
@@ -18,6 +19,7 @@ const products = [
         price: 3375,
         rating: 4,
         description: "Complete premium skincare combo designed to restore glow and fight early signs of aging.",
+        offerNote: "🔥 Limited skincare combo offer! Don’t miss this premium deal.",
         image: "https://m.media-amazon.com/images/I/61FtBsWTqlL._SL1500_.jpg",
         amazon: "https://amzn.to/3MZ2Jv3"
     },
@@ -29,6 +31,7 @@ const products = [
         price: 2499,
         rating: 4,
         description: "Hybrid ANC up to 50dB with 50 hours playtime and powerful 10mm dual drivers for immersive sound.",
+        offerNote: "🎧 Massive discount! Stocks are selling fast — secure yours today!",
         image: "https://m.media-amazon.com/images/I/71ut+5l0kyL._SL1500_.jpg",
         amazon: "https://amzn.to/4lbYRnm"
     },
@@ -40,6 +43,7 @@ const products = [
         price: 3999,
         rating: 4,
         description: "Handcrafted premium wooden spice rack designed to organize your kitchen elegantly.",
+        offerNote: "🏠 Kitchen special deal! Upgrade your space before this offer disappears.",
         image: "https://m.media-amazon.com/images/I/81yH2z-ELGL._SL1500_.jpg",
         amazon: "https://amzn.to/4kYRkba"
     }
@@ -68,27 +72,22 @@ function renderProducts() {
         grid.innerHTML += `
             <div class="bg-white rounded-xl shadow-md border hover:shadow-lg transition flex flex-col p-4">
 
-                <!-- Limited Deal Badge -->
                 <div style="background:#cc0c39; color:white; font-size:12px; padding:6px 10px; border-radius:4px; width:fit-content; margin-bottom:10px;">
                     Limited time deal
                 </div>
 
-                <!-- Product Image -->
                 <div style="height:280px; display:flex; align-items:center; justify-content:center;">
                     <img src="${product.image}" style="max-height:260px; object-fit:contain;">
                 </div>
 
-                <!-- Product Name -->
                 <h3 style="font-weight:600; margin-top:10px;">
                     ${product.name}
                 </h3>
 
-                <!-- Description -->
                 <p style="font-size:13px; color:#555; margin-top:6px;">
                     ${product.description}
                 </p>
 
-                <!-- Price Section -->
                 <div style="margin-top:8px;">
                     <span style="color:#cc0c39; font-size:18px; font-weight:bold;">
                         -${discount}%
@@ -105,12 +104,11 @@ function renderProducts() {
                     </span>
                 </div>
 
-                <!-- Urgency -->
-                <p style="color:#dc2626; font-size:13px; margin-top:6px;">
-                    ⚡ Hurry! This offer may end soon. Grab it before it's gone!
+                <!-- Different Note For Each Product -->
+                <p style="color:#dc2626; font-size:13px; margin-top:8px; font-weight:500;">
+                    ${product.offerNote}
                 </p>
 
-                <!-- Buttons -->
                 <button onclick="addToCart(${product.id})"
                     style="margin-top:10px; padding:8px; background:#f0f0f0; border:none; border-radius:6px;">
                     Add to Cart
@@ -163,6 +161,3 @@ function updateCart() {
 }
 
 document.addEventListener("DOMContentLoaded", renderProducts);
-
-
-
