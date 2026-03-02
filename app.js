@@ -1,52 +1,44 @@
-// PRODUCTS DATABASE
 const products = [
-    { 
-        id: 1, 
+    {
+        id: 1,
         name: "Forest Essentials Soundarya Night Cream",
-        category: "Luxury Skin Care", 
-        price: 3375, 
-        rating: 4, 
-        image: "https://img.forestessentialsindia.com/pub/media/catalog/product/cache/f8158826193ba5faa8b862a9bd1eb9e9/8/8/8842_soundarya_radiance_day_cream_50g_front_2048_x_2048.png", 
+        category: "Luxury Skin Care",
+        price: 3375,
+        rating: 4,
+        image: "https://img.forestessentialsindia.com/pub/media/catalog/product/cache/f8158826193ba5faa8b862a9bd1eb9e9/8/8/8842_soundarya_radiance_day_cream_50g_front_2048_x_2048.png",
         amazon: "https://amzn.to/40zodlq"
     },
-
-    { 
-        id: 2, 
+    {
+        id: 2,
         name: "Anti-Aging Skincare Premium Gift Set",
-        category: "Luxury Skin Care", 
-        price: 2299, 
-        rating: 4, 
-        image: "https://m.media-amazon.com/images/I/61FtBsWTqlL._SL1500_.jpg", 
+        category: "Luxury Skin Care",
+        price: 2299,
+        rating: 4,
+        image: "https://m.media-amazon.com/images/I/61FtBsWTqlL._SL1500_.jpg",
         amazon: "https://amzn.to/3MZ2Jv3"
     },
-
-    { 
-        id: 3, 
+    {
+        id: 3,
         name: "GOBOULT Earl TWS Earbuds with Hybrid ANC",
-        category: "Luxury EarBud", 
-        price: 2499, 
-        rating: 4, 
-        image: "https://m.media-amazon.com/images/I/71ut+5l0kyL._SL1500_.jpg", 
+        category: "Luxury EarBud",
+        price: 2499,
+        rating: 4,
+        image: "https://m.media-amazon.com/images/I/71ut+5l0kyL._SL1500_.jpg",
         amazon: "https://amzn.to/4lbYRnm"
     }
 ];
 
 let cart = [];
 
-// FORMAT CURRENCY (INR)
 function formatINR(amount) {
-    return new Intl.NumberFormat('en-IN', {
-        style: 'currency',
-        currency: 'INR'
-    }).format(amount);
+    return "₹" + amount.toLocaleString("en-IN");
 }
 
-// RENDER PRODUCTS
 function renderProducts() {
-    const grid = document.getElementById('product-grid');
+    const grid = document.getElementById("product-grid");
     if (!grid) return;
 
-    grid.innerHTML = '';
+    grid.innerHTML = "";
 
     products.forEach(product => {
         grid.innerHTML += `
@@ -73,13 +65,12 @@ function renderProducts() {
     });
 }
 
-// ADD TO CART
 function addToCart(id) {
     const product = products.find(p => p.id === id);
     const existing = cart.find(item => item.id === id);
 
     if (existing) {
-        existing.qty += 1;
+        existing.qty++;
     } else {
         cart.push({ ...product, qty: 1 });
     }
@@ -87,15 +78,15 @@ function addToCart(id) {
     updateCart();
 }
 
-// UPDATE CART
 function updateCart() {
-    const cartItems = document.getElementById('cart-items');
-    const cartCount = document.getElementById('cart-count');
-    const cartTotal = document.getElementById('cart-total');
+    const cartItems = document.getElementById("cart-items");
+    const cartCount = document.getElementById("cart-count");
+    const cartTotal = document.getElementById("cart-total");
 
     if (!cartItems) return;
 
-    cartItems.innerHTML = '';
+    cartItems.innerHTML = "";
+
     let total = 0;
     let qty = 0;
 
@@ -115,20 +106,9 @@ function updateCart() {
     if (cartTotal) cartTotal.innerText = formatINR(total);
 }
 
-// TOGGLE CART
 function toggleCart() {
-    const drawer = document.getElementById('cart-drawer');
-    if (drawer) {
-        drawer.classList.toggle('translate-x-full');
-    }
+    const drawer = document.getElementById("cart-drawer");
+    if (drawer) drawer.classList.toggle("translate-x-full");
 }
 
-// OPTIONAL FILTER
-function filterCategory(category) {
-    renderProducts();
-}
-
-// LOAD AFTER DOM READY
-document.addEventListener("DOMContentLoaded", function () {
-    renderProducts();
-});
+document.addEventListener("DOMContentLoaded", renderProducts);
