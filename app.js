@@ -1,7 +1,7 @@
 const products = [
     {
         id: 1,
-        name: "Forest Essentials Soundarya Night Cream",
+        name: "Fores Essentials Soundarya Night Cream",
         category: "Luxury Skin Care",
         originalPrice: 3373,
         price: 3375,
@@ -161,3 +161,4 @@ function updateCart() {
 }
 
 document.addEventListener("DOMContentLoaded", renderProducts);
+
