@@ -42,21 +42,28 @@ function renderProducts() {
 
     products.forEach(product => {
         grid.innerHTML += `
-            <div class="bg-white rounded-xl shadow-sm border overflow-hidden flex flex-col">
-                <div class="h-56 overflow-hidden bg-gray-100">
-                    <img src="${product.image}" class="w-full h-full object-cover">
+            <div class="bg-white rounded-xl shadow-md border hover:shadow-lg transition overflow-hidden flex flex-col">
+
+                <!-- FIXED IMAGE SECTION -->
+                <div class="h-72 flex items-center justify-center bg-white p-4">
+                    <img src="${product.image}" 
+                         class="max-h-full max-w-full object-contain">
                 </div>
+
                 <div class="p-5 flex flex-col flex-1">
-                    <h3 class="font-bold mb-2">${product.name}</h3>
-                    <span class="text-2xl font-bold mb-4">${formatINR(product.price)}</span>
+                    <h3 class="font-bold mb-2 text-gray-800">${product.name}</h3>
+
+                    <span class="text-2xl font-bold mb-4 text-gray-900">
+                        ${formatINR(product.price)}
+                    </span>
 
                     <button onclick="addToCart(${product.id})"
-                        class="w-full bg-gray-100 py-2 rounded mb-2 hover:bg-black hover:text-white">
+                        class="w-full bg-gray-100 py-2 rounded mb-2 hover:bg-black hover:text-white transition">
                         Add to Cart
                     </button>
 
                     <a href="${product.amazon}" target="_blank"
-                        class="w-full block text-center bg-yellow-500 text-white py-2 rounded">
+                        class="w-full block text-center bg-yellow-500 hover:bg-yellow-600 text-white py-2 rounded transition">
                         Buy on Amazon
                     </a>
                 </div>
