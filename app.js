@@ -49,7 +49,7 @@ const products = [
     },
      {
         id: 5,
-        name: "fire-Boltt Phoenix Pro Smartwatch – Bluetooth Calling & 120+ Sports Modes",
+        name: "Fire-Boltt Phoenix Pro Smartwatch – Bluetooth Calling & 120+ Sports Modes",
         category: "Luxury Smart Watch",
         originalPrice: 18999,
         price: 1299,
@@ -174,6 +174,7 @@ function updateCart() {
 }
 
 document.addEventListener("DOMContentLoaded", renderProducts);
+
 
 
 
