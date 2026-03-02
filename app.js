@@ -14,7 +14,7 @@ const products = [
         id: 2,
         name: "Anti-Aging Skincare Premium Gift Set",
         category: "Luxury Skin Care",
-        originalPrice: 4999,
+        originalPrice: 4500,
         price: 3375,
         rating: 4,
         description: "Complete premium skincare combo designed to restore glow and fight early signs of aging.",
@@ -163,4 +163,5 @@ function updateCart() {
 }
 
 document.addEventListener("DOMContentLoaded", renderProducts);
+
 
