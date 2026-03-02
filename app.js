@@ -4,17 +4,27 @@ const products = [
         id: 1, 
         name: "Forest Essentials Soundarya Night Cream",
         category: "Luxury Skin Care", 
-        price: 40.66, 
+        price: 2499, 
         rating: 4, 
         image: "https://img.forestessentialsindia.com/pub/media/catalog/product/cache/f8158826193ba5faa8b862a9bd1eb9e9/8/8/8842_soundarya_radiance_day_cream_50g_front_2048_x_2048.png", 
         amazon: "https://amzn.to/40zodlq"
-    },  // ✅ comma important
+    },
 
     { 
         id: 2, 
         name: "Anti-Aging Skincare Premium Gift Set",
         category: "Luxury Skin Care", 
-        price: 37.06, 
+        price: 2299, 
+        rating: 4, 
+        image: "https://m.media-amazon.com/images/I/61FtBsWTqlL._SL1500_.jpg", 
+        amazon: "https://amzn.to/3MZ2Jv3"
+    },
+
+    { 
+        id: 3, 
+        name: "GOBOULT Earl TWS Earbuds with Hybrid ANC",
+        category: "Luxury EarBud", 
+        price: 2999, 
         rating: 4, 
         image: "https://m.media-amazon.com/images/I/61FtBsWTqlL._SL1500_.jpg", 
         amazon: "https://amzn.to/3MZ2Jv3"
@@ -22,6 +32,14 @@ const products = [
 ];
 
 let cart = [];
+
+// FORMAT CURRENCY (INR)
+function formatINR(amount) {
+    return new Intl.NumberFormat('en-IN', {
+        style: 'currency',
+        currency: 'INR'
+    }).format(amount);
+}
 
 // RENDER PRODUCTS
 function renderProducts() {
@@ -38,7 +56,7 @@ function renderProducts() {
                 </div>
                 <div class="p-5 flex flex-col flex-1">
                     <h3 class="font-bold mb-2">${product.name}</h3>
-                    <span class="text-2xl font-bold mb-4">$${product.price.toFixed(2)}</span>
+                    <span class="text-2xl font-bold mb-4">${formatINR(product.price)}</span>
 
                     <button onclick="addToCart(${product.id})"
                         class="w-full bg-gray-100 py-2 rounded mb-2 hover:bg-black hover:text-white">
@@ -46,7 +64,7 @@ function renderProducts() {
                     </button>
 
                     <a href="${product.amazon}" target="_blank"
-                        class="w-full block text-center bg-amazon text-white py-2 rounded">
+                        class="w-full block text-center bg-yellow-500 text-white py-2 rounded">
                         Buy on Amazon
                     </a>
                 </div>
@@ -88,22 +106,24 @@ function updateCart() {
         cartItems.innerHTML += `
             <div class="flex justify-between border-b pb-2">
                 <p>${item.name} (x${item.qty})</p>
-                <p>$${(item.price * item.qty).toFixed(2)}</p>
+                <p>${formatINR(item.price * item.qty)}</p>
             </div>
         `;
     });
 
     cartCount.innerText = qty;
-    cartTotal.innerText = `$${total.toFixed(2)}`;
+    cartTotal.innerText = formatINR(total);
 }
 
 // TOGGLE CART
 function toggleCart() {
     const drawer = document.getElementById('cart-drawer');
-    drawer.classList.toggle('translate-x-full');
+    if (drawer) {
+        drawer.classList.toggle('translate-x-full');
+    }
 }
 
-// OPTIONAL FILTER (to avoid console error)
+// OPTIONAL FILTER
 function filterCategory(category) {
     renderProducts();
 }
