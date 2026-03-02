@@ -5,6 +5,9 @@ const products = [
         category: "Luxury Skin Care",
         price: 3375,
         rating: 4,
+        description: "Luxurious Ayurvedic night cream enriched with 24K gold for radiant and youthful-looking skin.",
+        features: ["24K Gold Infused", "Anti-Aging Formula", "Deep Nourishment", "Premium Skincare"],
+        offerNote: "⚡ Note: This offer may end soon. Be quick and grab yours today!",
         image: "https://img.forestessentialsindia.com/pub/media/catalog/product/cache/f8158826193ba5faa8b862a9bd1eb9e9/8/8/8842_soundarya_radiance_day_cream_50g_front_2048_x_2048.png",
         amazon: "https://amzn.to/40zodlq"
     },
@@ -14,6 +17,9 @@ const products = [
         category: "Luxury Skin Care",
         price: 3375,
         rating: 4,
+        description: "Complete premium skincare combo designed to restore glow and fight early signs of aging.",
+        features: ["Complete Care Set", "Hydration Boost", "Glow Enhancement", "Perfect Gift Option"],
+        offerNote: "⚡ Note: Limited-time deal. Don’t miss this special offer!",
         image: "https://m.media-amazon.com/images/I/61FtBsWTqlL._SL1500_.jpg",
         amazon: "https://amzn.to/3MZ2Jv3"
     },
@@ -23,15 +29,21 @@ const products = [
         category: "Luxury EarBud",
         price: 2499,
         rating: 4,
+        description: "Hybrid ANC up to 50dB with 50 hours playtime and powerful 10mm dual drivers for immersive sound.",
+        features: ["50dB Hybrid ANC", "50H Battery", "Spatial Audio", "IPX5 Water Resistant"],
+        offerNote: "⚡ Hurry! Stocks are selling fast. Grab this powerful sound upgrade now!",
         image: "https://m.media-amazon.com/images/I/71ut+5l0kyL._SL1500_.jpg",
         amazon: "https://amzn.to/4lbYRnm"
     },
     {
         id: 4,
-        name: "Brick Brown Handcrafted Premium Homeydo Organizer Wooden Spice Rack 2-Tier Kitchen Countertop Shelf",
+        name: "Brick Brown Wooden 2-Tier Spice Rack Organizer",
         category: "Kitchen Appliance",
         price: 3999,
         rating: 4,
+        description: "Handcrafted premium wooden spice rack designed to organize your kitchen elegantly.",
+        features: ["2-Tier Design", "Space Saving", "Premium Wood Finish", "Modern Kitchen Decor"],
+        offerNote: "⚡ Limited availability. Upgrade your kitchen before the deal ends!",
         image: "https://m.media-amazon.com/images/I/81yH2z-ELGL._SL1500_.jpg",
         amazon: "https://amzn.to/4kYRkba"
     }
@@ -63,9 +75,21 @@ function renderProducts() {
                         ${product.name}
                     </h3>
 
-                    <span class="text-2xl font-bold mb-4 text-gray-900">
+                    <p style="font-size:14px; color:#555; margin-bottom:8px;">
+                        ${product.description}
+                    </p>
+
+                    <ul style="font-size:13px; color:#444; margin-bottom:10px; padding-left:18px;">
+                        ${product.features.map(f => `<li>✔ ${f}</li>`).join("")}
+                    </ul>
+
+                    <span class="text-2xl font-bold mb-2 text-gray-900">
                         ${formatINR(product.price)}
                     </span>
+
+                    <p style="color:#dc2626; font-size:14px; margin-bottom:12px; font-weight:500;">
+                        ${product.offerNote}
+                    </p>
 
                     <button onclick="addToCart(${product.id})"
                         class="w-full bg-gray-100 py-2 rounded mb-2 hover:bg-black hover:text-white transition">
