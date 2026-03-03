@@ -58,6 +58,18 @@ const products = [
         offerNote: "🔥 Hot deal alert! Secure yours before stocks run out!",
         image: "https://m.media-amazon.com/images/I/71tkAAxauUL._SL1500_.jpg",
         amazon: "https://amzn.to/4bfVgRE"
+    }, 
+    {
+        id: 6,
+        name: "WZATCO Yuva Go Pro Smart Projector – Native 1080P, 4K HDR Support, Auto Focus & WiFi 6 | Fully Automatic Android 13",
+        category: "Luxury Home Appliance",
+        originalPrice:29990,
+        price: 11980,
+        rating: 4,
+        description: "Turn any wall into your private cinema 🎥✨ Crisp 1080P visuals, auto focus perfection, and 4K HDR brilliance — because movie nights deserve more than a small screen.",
+        offerNote: "⚡ Limited Time Offer – Grab this deal before the price goes up!",
+        image: "https://m.media-amazon.com/images/I/71kPpcyp1VL._SL1500_.jpg",
+        amazon: "https://amzn.to/4b0LrG6"
     }
     
 ];
@@ -174,6 +186,7 @@ function updateCart() {
 }
 
 document.addEventListener("DOMContentLoaded", renderProducts);
+
 
 
 
