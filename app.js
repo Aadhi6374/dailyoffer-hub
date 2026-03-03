@@ -70,6 +70,18 @@ const products = [
         offerNote: "⚡ Limited Time Offer – Grab this deal before the price goes up!",
         image: "https://m.media-amazon.com/images/I/71kPpcyp1VL._SL1500_.jpg",
         amazon: "https://amzn.to/4b0LrG6"
+    },
+     {
+        id: 7,
+        name: "Transform Your Room with Green Vines & Fairy Lights ✨ (40ft Aesthetic Wall Decor)",
+        category: "Luxury Home Decor",
+        originalPrice:600,
+        price: 297,
+        rating: 4,
+        description: "Instant room glow-up 🌿✨ 40ft fairy lights + green vines for the ultimate cozy aesthetic makeover. Perfect for bedrooms, living rooms & Christmas decor.",
+        offerNote: "⚡ Limited Time Deal – Create your cozy Pinterest glow before stocks",
+        image: "https://m.media-amazon.com/images/I/81a3yjFQ6zL._SL1500_.jpg",
+        amazon: "https://amzn.to/3MCjCfa"
     }
     
 ];
@@ -186,6 +198,7 @@ function updateCart() {
 }
 
 document.addEventListener("DOMContentLoaded", renderProducts);
+
 
 
 
