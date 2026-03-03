@@ -94,6 +94,19 @@ const products = [
         offerNote: "✨ Limited Glow Edition – Elevate your space before this aesthetic favorite sells out.",
         image: "https://m.media-amazon.com/images/I/61VRZY7x1BL._SL1024_.jpg",
         amazon: "https://amzn.to/4cXzxPI"
+    },{
+        id: 9,
+        name: "5-Tier Kitchen Trolley with Wheels 🖤 Space-Saving Metal Storage Organizer",
+        category: "Luxury Home Decor",
+        originalPrice:23000,
+        price:2933,
+        rating: 4,
+        description: "Maximize your kitchen space instantly with this 5-Tier Metal Kitchen Trolley 🖤✨ Designed for compact kitchens and busy homes, this rolling organizer keeps spices, vegetables, utensils, and essentials neatly arranged without clutter. The smooth wheels make it easy to move anywhere, while the sturdy metal design ensures long-lasting durability.
+
+Perfect for small apartments, modern kitchens, or anyone who loves a clean, organized space. A simple upgrade that makes cooking easier, storage smarter, and your kitchen look effortlessly tidy.",
+        offerNote: "⚡ Limited Stock Alert – Organize your kitchen before this best-seller sells out!",
+        image: "https://m.media-amazon.com/images/I/61VYwDsVxmL.jpg",
+        amazon: "https://amzn.to/4u4iy4f"
     }
     
 ];
@@ -210,6 +223,7 @@ function updateCart() {
 }
 
 document.addEventListener("DOMContentLoaded", renderProducts);
+
 
 
 
