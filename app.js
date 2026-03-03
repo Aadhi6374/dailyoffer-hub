@@ -82,6 +82,18 @@ const products = [
         offerNote: "⚡ Limited Time Deal – Create your cozy Pinterest glow before stocks",
         image: "https://m.media-amazon.com/images/I/81a3yjFQ6zL._SL1500_.jpg",
         amazon: "https://amzn.to/3MCjCfa"
+    },
+      {
+        id: 8,
+        name: "Retro Rose Gold LED Table Lamp ✨ Touch Sensor Night Light with 3 Brightness Levels",
+        category: "Luxury Home Decor",
+        originalPrice:1499,
+        price: 383,
+        rating: 4,
+        description: "Add instant elegance and warmth to any space 🌹✨ This retro rose gold LED table lamp creates a soft, cozy glow with 3 adjustable brightness levels — perfect for bedside reading, nursery nights, or aesthetic room decor. Rechargeable and touch-controlled for effortless use, it blends luxury style with everyday convenience. Whether for your bedroom, café, or a thoughtful gift, this lamp transforms ordinary lighting into a warm, inviting ambiance you’ll love coming home to.",
+        offerNote: "✨ Limited Glow Edition – Elevate your space before this aesthetic favorite sells out.",
+        image: "https://m.media-amazon.com/images/I/61VRZY7x1BL._SL1024_.jpg",
+        amazon: "https://amzn.to/4cXzxPI"
     }
     
 ];
@@ -198,6 +210,7 @@ function updateCart() {
 }
 
 document.addEventListener("DOMContentLoaded", renderProducts);
+
 
 
 
