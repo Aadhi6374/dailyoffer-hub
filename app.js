@@ -105,6 +105,17 @@ const products = [
         offerNote: "⚡ Limited Stock Alert – Organize your kitchen before this best-seller sells out!",
         image: "https://m.media-amazon.com/images/I/61VYwDsVxmL.jpg",
         amazon: "https://amzn.to/4u4iy4f"
+    },{
+        id: 10,
+        name: "Men’s Chanderi Silk Sequins Kurta ✨ Full Sleeve Mandarin Collar Ethnic Wear",
+        category: "Luxury Dress",
+        originalPrice:3999,
+        price:1199,
+        rating: 4,
+        description:"Upgrade your festive wardrobe with this elegant Men’s Chanderi Silk Sequins Kurta ✨ Designed with a stylish Mandarin collar, full sleeves, and subtle sequins detailing, it brings the perfect blend of traditional charm and modern sophistication. The lightweight Chanderi silk fabric offers comfort and a premium look, making it ideal for weddings, festive celebrations, and special occasions. Pair it with churidar or trousers to create a refined ethnic style that stands out effortlessly.",
+        offerNote: "⚡ Festive Special – Upgrade your ethnic style before this deal ends!",
+        image: "https://m.media-amazon.com/images/I/51e7pTcUBYL._SY679_.jpg",
+        amazon: "https://amzn.to/46AM8Ve"
     }
     
 ];
@@ -221,6 +232,7 @@ function updateCart() {
 }
 
 document.addEventListener("DOMContentLoaded", renderProducts);
+
 
 
 
