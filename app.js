@@ -1,20 +1,6 @@
 const products = [
-
-
-{
-"id":1,
-"name":"Magnetic Fidget Pen 🧲 Stress Relief Decompression Toy for Kids & Teens",
-"category":"Luxury Gadgets",
-"originalPrice":5294,
-"price":5294,
-"rating":4,
-"description":"This Magnetic Fidget Pen 🧲✍️ is more than a pen — it’s a stress-relief desk toy that can transform into countless shapes. Perfect for focus, creativity, and fun at school, work, or home.",
-"offerNote":"⚡ Limited Time Gadget Deal – This viral magnetic fidget pen is selling fast. Grab yours before the price goes up!",
-"image":"https://m.media-amazon.com/images/I/71dEEsiocOL._SL1500_.jpg",
-"amazon":"https://amzn.to/4u9rrK9"
-},
   {
-"id":11,
+"id":1,
 "name":"Forest Essentials Soundarya Night Cream",
 "category":"Luxury Skin Care",
 "originalPrice":3373,
@@ -141,6 +127,17 @@ const products = [
 "offerNote":"⚡ Festive Special – Upgrade your style today!",
 "image":"https://m.media-amazon.com/images/I/51e7pTcUBYL._SY679_.jpg",
 "amazon":"https://amzn.to/46AM8Ve"
+} ,{
+"id":11,
+"name":"Magnetic Fidget Pen 🧲 Stress Relief Decompression Toy for Kids & Teens",
+"category":"Luxury Gadgets",
+"originalPrice":5294,
+"price":5294,
+"rating":4,
+"description":"This Magnetic Fidget Pen 🧲✍️ is more than a pen — it’s a stress-relief desk toy that can transform into countless shapes. Perfect for focus, creativity, and fun at school, work, or home.",
+"offerNote":"⚡ Limited Time Gadget Deal – This viral magnetic fidget pen is selling fast. Grab yours before the price goes up!",
+"image":"https://m.media-amazon.com/images/I/71dEEsiocOL._SL1500_.jpg",
+"amazon":"https://amzn.to/4u9rrK9"
 }
 
 ]
