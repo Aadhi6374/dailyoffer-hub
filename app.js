@@ -128,6 +128,17 @@ const products = [
 "offerNote":"⚡ Festive Special – Upgrade your style today!",
 "image":"https://m.media-amazon.com/images/I/51e7pTcUBYL._SY679_.jpg",
 "amazon":"https://amzn.to/46AM8Ve"
+},{
+"id":11,
+"name":"Magnetic Fidget Pen - Decompression Toy for 8-12 Year Old Teenage Boys, Kids or Friends - Novelty Magnetic Toy",
+"category":"Luxury Gadgets",
+"originalPrice":5294,
+"price":5294,
+"rating":4,
+"description":"The Magnetic Fidget Pen Decompression Toy is a unique stress-relief desk gadget that doubles as a real pen and a fun magnetic puzzle. Designed with powerful magnets and steel balls, it can transform into different shapes, helping improve focus, creativity, and relaxation. Perfect for kids, teens, and adults, this viral desk toy is ideal for school, office, or as a unique gift for gadget lovers.",
+"offerNote":"⚡ Limited Time Gadget Deal – This viral magnetic fidget pen is trending everywhere. Grab yours before the price increases!",
+"image":"https://m.media-amazon.com/images/I/71dEEsiocOL._SL1500_.jpg",
+"amazon":"https://amzn.to/47vIYSS"
 }
 
 ]
@@ -235,3 +246,4 @@ getProductFromURL()
 renderProducts()
 
 })
+
