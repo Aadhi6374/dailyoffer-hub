@@ -1,1 +1,132 @@
+[
+{
+"id":1,
+"name":"Forest Essentials Soundarya Night Cream",
+"category":"Luxury Skin Care",
+"originalPrice":3373,
+"price":3375,
+"rating":4,
+"description":"Luxurious Ayurvedic night cream enriched with 24K gold for radiant skin.",
+"offerNote":"⚡ Exclusive beauty deal! Grab it now!",
+"image":"https://img.forestessentialsindia.com/pub/media/catalog/product/cache/f8158826193ba5faa8b862a9bd1eb9e9/8/8/8842_soundarya_radiance_day_cream_50g_front_2048_x_2048.png",
+"amazon":"https://amzn.to/40zodlq"
+},
 
+{
+"id":2,
+"name":"Anti-Aging Skincare Premium Gift Set",
+"category":"Luxury Skin Care",
+"originalPrice":4500,
+"price":3375,
+"rating":4,
+"description":"Complete premium skincare combo designed to restore glow and fight aging.",
+"offerNote":"🔥 Limited skincare combo offer!",
+"image":"https://m.media-amazon.com/images/I/61FtBsWTqlL._SL1500_.jpg",
+"amazon":"https://amzn.to/3MZ2Jv3"
+},
+
+{
+"id":3,
+"name":"GOBOULT Earl TWS Earbuds with Hybrid ANC",
+"category":"Luxury EarBud",
+"originalPrice":6999,
+"price":2499,
+"rating":4,
+"description":"Hybrid ANC up to 50dB with 50 hours playtime and powerful drivers.",
+"offerNote":"🎧 Massive discount! Secure yours today!",
+"image":"https://m.media-amazon.com/images/I/71ut+5l0kyL._SL1500_.jpg",
+"amazon":"https://amzn.to/4lbYRnm"
+},
+
+{
+"id":4,
+"name":"Brick Brown Wooden 2-Tier Spice Rack Organizer",
+"category":"Kitchen Appliance",
+"originalPrice":5699,
+"price":3999,
+"rating":4,
+"description":"Premium wooden spice rack designed to organize your kitchen.",
+"offerNote":"🏠 Kitchen special deal! Upgrade your space today.",
+"image":"https://m.media-amazon.com/images/I/81yH2z-ELGL._SL1500_.jpg",
+"amazon":"https://amzn.to/4kYRkba"
+},
+
+{
+"id":5,
+"name":"Fire-Boltt Phoenix Pro Smartwatch",
+"category":"Luxury Smart Watch",
+"originalPrice":18999,
+"price":1299,
+"rating":4,
+"description":"Bluetooth calling smartwatch with 120+ sports modes and health tracking.",
+"offerNote":"🔥 Hot deal alert! Secure yours before stock ends!",
+"image":"https://m.media-amazon.com/images/I/71tkAAxauUL._SL1500_.jpg",
+"amazon":"https://amzn.to/4bfVgRE"
+},
+
+{
+"id":6,
+"name":"WZATCO Yuva Go Pro Smart Projector",
+"category":"Luxury Home Appliance",
+"originalPrice":29990,
+"price":11980,
+"rating":4,
+"description":"Native 1080P smart projector with auto focus and WiFi 6 support.",
+"offerNote":"⚡ Limited Time Offer – Grab this deal now!",
+"image":"https://m.media-amazon.com/images/I/71kPpcyp1VL._SL1500_.jpg",
+"amazon":"https://amzn.to/4b0LrG6"
+},
+
+{
+"id":7,
+"name":"Green Vines & Fairy Lights Wall Decor",
+"category":"Luxury Home Decor",
+"originalPrice":600,
+"price":297,
+"rating":4,
+"description":"40ft fairy lights with green vines for cozy aesthetic room decor.",
+"offerNote":"⚡ Limited Time Deal – Create your cozy glow!",
+"image":"https://m.media-amazon.com/images/I/81a3yjFQ6zL._SL1500_.jpg",
+"amazon":"https://amzn.to/3MCjCfa"
+},
+
+{
+"id":8,
+"name":"Retro Rose Gold LED Table Lamp",
+"category":"Luxury Home Decor",
+"originalPrice":1499,
+"price":383,
+"rating":4,
+"description":"Rechargeable touch sensor lamp with 3 brightness levels.",
+"offerNote":"✨ Limited Glow Edition – Elevate your space today.",
+"image":"https://m.media-amazon.com/images/I/61VRZY7x1BL._SL1024_.jpg",
+"amazon":"https://amzn.to/4cXzxPI"
+},
+
+{
+"id":9,
+"name":"5-Tier Kitchen Trolley with Wheels",
+"category":"Luxury Home Decor",
+"originalPrice":23000,
+"price":2933,
+"rating":4,
+"description":"Space saving metal storage organizer for small kitchens.",
+"offerNote":"⚡ Limited Stock Alert – Organize your kitchen now!",
+"image":"https://m.media-amazon.com/images/I/61VYwDsVxmL.jpg",
+"amazon":"https://amzn.to/4u4iy4f"
+},
+
+{
+"id":10,
+"name":"Men’s Chanderi Silk Sequins Kurta",
+"category":"Luxury Dress",
+"originalPrice":3999,
+"price":1199,
+"rating":4,
+"description":"Elegant ethnic kurta with mandarin collar and sequins design.",
+"offerNote":"⚡ Festive Special – Upgrade your style today!",
+"image":"https://m.media-amazon.com/images/I/51e7pTcUBYL._SY679_.jpg",
+"amazon":"https://amzn.to/46AM8Ve"
+}
+
+]
