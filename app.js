@@ -132,10 +132,15 @@ const products = [
 
 ]
 
-let cart = []
+let cart=[]
 
 function formatINR(amount){
 return "₹"+amount.toLocaleString("en-IN")
+}
+
+function formatUSD(amount){
+let usd=amount/83
+return "$"+usd.toFixed(2)
 }
 
 function calculateDiscount(original,price){
@@ -183,6 +188,10 @@ ${product.description}
 <span style="font-size:26px;font-weight:bold;margin-left:8px;">
 ${formatINR(product.price)}
 </span>
+
+<div style="font-size:14px;color:#555;">
+(${formatUSD(product.price)})
+</div>
 
 </div>
 
