@@ -139,6 +139,18 @@ const products = [
 "offerNote":"⚡ Limited Time Gadget Deal – This viral magnetic fidget pen is trending everywhere. Grab yours before the price increases!",
 "image":"https://m.media-amazon.com/images/I/71dEEsiocOL._SL1500_.jpg",
 "amazon":"https://amzn.to/47vIYSS"
+},
+  {
+"id":12,
+"name":"Magnetic Levitating Plant Pot 🌿 Floating Plant Decor for Home & Office Desk",
+"category":"Luxury Gadgets",
+"originalPrice":15999,
+"price":4499,
+"rating":4,
+"description":"This Magnetic Floating Plant Pot uses levitation technology to make your plant float and rotate in the air 🌿✨. A stunning modern home decor gadget perfect for desks, offices, and unique gift ideas.",
+"offerNote":"⚡ Limited Time Deal – This floating plant pot is going viral. Grab yours before the price increases!",
+"image":"https://m.media-amazon.com/images/I/51oNGPJdE0L.jpg",
+"amazon":"https://amzn.to/4cEe4LL"
 }
 
 ]
@@ -246,4 +258,5 @@ getProductFromURL()
 renderProducts()
 
 })
+
 
